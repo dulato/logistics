@@ -1,0 +1,130 @@
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    width: 100%;
+}
+/* Слайд */
+.autos_slider .slick-slide{
+    margin: 0 15px;
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+.autos_slider{
+    position: relative;
+    padding: 0px 0px 22px 0px;
+}
+.autos_slider_item{
+    background: #FFFFFF;
+    text-align: center;
+    width: 31%;
+    transition: all 0.3s ease 0s;
+}
+.autos_slider_item:hover{
+    background: #EA3A61;
+}
+.autos_slider_item:hover .autos_slider_title{ 
+    color: #FFFFFF;
+}
+
+.autos_slider .slick-arrow{
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+.autos_slider .slick-arrow.slick-prev{
+    left: 5px;
+    background: url('../img/prevbtn.svg') center no-repeat;
+}
+.autos_slider .slick-arrow.slick-next{
+    right: 5px;
+    background: url('../img/prevbtn.svg') center no-repeat;
+    transform: scale(-1, 1);
+}
+.autos_slider .slick-arrow.slick-prev:hover{
+    background: url('../img/nextbtn.svg') center no-repeat;
+    background-color: #DD054F;
+    transform: scale(-1, 1);
+    background-position: center right 16px;
+}
+.autos_slider .slick-arrow.slick-next:hover{
+    background: url('../img/nextbtn.svg') center no-repeat;
+    background-color: #DD054F;
+    transform: scale(1, 1);
+    background-position: center right 16px;
+}
+
+.autos_slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px 0px 0px;
+}
+.autos_slider .slick-dots li{
+    list-style: none;
+    margin: 0px 8px;
+}
+.autos_slider .slick-dots li button{
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background: #DD054F;
+    border: none;
+}
+
+.autos_slider .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 2px solid #DD054F;
+}
+
+@media only screen and (max-width: 768px) {
+    .autos_slider .slick-slide{
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .autos_slider .slick-slide{
+        margin: 0;
+    }
+}
+
